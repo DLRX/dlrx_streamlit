@@ -7,6 +7,7 @@ from datetime import time, datetime
 st.write("""
          # My first app
          Hello *world!*
+         Première question : quand je touche un outil intéractif (slider, box, etc.) les random.randn se relance cela change les graphiques
          """)
 
 
@@ -90,5 +91,14 @@ option = st.selectbox(
      ('Blue', 'Red', 'Green'))
 
 st.write('Your favorite color is ', option)
+
+st.header('st.multiselect')
+
+options = st.multiselect(
+     'What are your favorite colors',
+     ['Green', 'Yellow', 'Red', 'Blue'],
+     ['Yellow', 'Red'])
+
+st.write('You selected:', options)
 
 
