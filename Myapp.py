@@ -118,4 +118,5 @@ if coffee:
 if cola:
      st.write("Here you go 🥤")
 
-
+df = pd.read_csv(r"C:\Users\dodol\Documents\LBM\Stage\test_recup_43k.csv")
+st.write(df)
