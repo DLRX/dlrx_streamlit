@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import altair as alt 
+from datetime import time, datetime
 
 st.write("""
          # My first app
@@ -38,5 +39,13 @@ c = alt.Chart(df2).mark_circle().encode(
     x='a',y='b', size='c', color='c',tooltip=['a','b','c']
 )
 st.write(c)
+
+st.header('st.slider')
+
+st.subheader('Slider')
+
+age = st.slider('How old are you?', 0, 130, 25)
+st.write("I'm ", age, 'years old')
+
 
 
