@@ -44,4 +44,12 @@ if done is True:
 
         st.pyplot(fig)
 
+col = st.container()
+with col:
+    btn = st.button("Go to main page", key="main", help="Navigate to main", type="primary")
+    st.markdown('<div class="full-width-button"></div>', unsafe_allow_html=True)
+
+if btn:
+    st.switch_page("./main.py")
+
 
