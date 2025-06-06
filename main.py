@@ -1,12 +1,14 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
-import altair as alt 
-from datetime import time, datetime
-from matplotlib_venn import venn2
+try:
+    from matplotlib_venn import venn2
+except ImportError:
+    import subprocess
+    import sys
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib-venn"])
+    from matplotlib_venn import venn2
 import matplotlib.pyplot as plt
-import subprocess
-import sys
+
 
 done = False
 st.session_state['done'] = done
