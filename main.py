@@ -1,7 +1,10 @@
-import streamlit as st
 import pandas as pd
 from matplotlib_venn import venn2
-import matplotlib.pyplot as plt
+try:
+    import streamlit as st
+    import matplotlib.pyplot as plt
+except:
+    pip install -r './requirement.txt'
 
 
 done = False
