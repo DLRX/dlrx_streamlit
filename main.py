@@ -1,12 +1,7 @@
 import streamlit as st
 import pandas as pd
-try:
-    from matplotlib_venn import venn2
-except ImportError:
-    import subprocess
-    import sys
-    subprocess.check_call([sys.executable, "-m", "!pip", "install", "matplotlib-venn"])
-    from matplotlib_venn import venn2
+
+from matplotlib_venn import venn2
 import matplotlib.pyplot as plt
 
 
