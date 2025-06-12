@@ -48,7 +48,7 @@ if file:
     if options:
         df_filtered = df[options]
         st.write('Filtered Data:', df_filtered)
-        output_path = "./data/filtered_data.csv"
+        output_path = "data/filtered_data.csv"
         df_filtered.to_csv(output_path, index=False)
         st.success(f"Filtered data saved to {output_path}")
 
@@ -84,11 +84,6 @@ if file:
             st.pyplot(fig)
 
         
-
-        if st.button("Save Venn Diagram as Image"):
-            image_path = "./data/venn_diagram.png"
-            fig.savefig(image_path)
-            st.success(f"Venn diagram saved to {image_path}")
 
         st.markdown(
             """
