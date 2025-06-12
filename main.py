@@ -1,10 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(initial_sidebar_state="expanded", page_title="CompTkit", layout="centered")
-
-# Désactive la navigation automatique de Streamlit en ne mettant pas les pages dans le dossier 'pages'
-
 
 done = False
 st.session_state['done'] = done
@@ -15,6 +11,8 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+st.image("img/logo.svg", use_column_width=True)
 
 import importlib.util
 st.write('pandas dispo ?', importlib.util.find_spec("pandas") is not None)
