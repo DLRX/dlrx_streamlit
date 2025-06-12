@@ -115,6 +115,7 @@ st.markdown(
 )
 
 done = st.session_state.get('done')
+df_filtered = st.session_state.get('df_filtered') 
 
 if not done:
     st.write("We saw that for a number of sequences, the both tools predict domain IDs.")

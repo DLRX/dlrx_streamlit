@@ -53,10 +53,7 @@ if file:
 
     if options:
         df_filtered = df[options]
-        st.write('Filtered Data:', df_filtered)
-        output_path = "data/filtered_data.csv"
-        df_filtered.to_csv(output_path, index=False)
-        st.success(f"Filtered data saved to {output_path}")
+        st.session_state['df_filtered'] = df_filtered 
 
         st.markdown(
                 """
