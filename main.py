@@ -11,8 +11,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-st.image("img/logo.svg", use_column_width=True, width=1000)
+st.image("img/logo.svg", use_container_width=True)
 
 import importlib.util
 st.write('pandas dispo ?', importlib.util.find_spec("pandas") is not None)
