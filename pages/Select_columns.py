@@ -38,7 +38,7 @@ if file:
 
     st.markdown(
         "You have to select <i>'keys'</i> as the first column.<br>"
-        "Then choose the two column to compare",
+        "Then choose the two column to compare"
         "You can choose more columns but respect Keys in 0 and two column to compare at your last choices",
         unsafe_allow_html=True
     )
