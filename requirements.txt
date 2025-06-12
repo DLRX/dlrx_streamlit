@@ -1,0 +1,7 @@
+streamlit
+matplotlib
+pandas
+tqdm
+scipy
+matplotlib-venn
+numpy

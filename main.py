@@ -12,6 +12,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+import importlib.util
+st.write('pandas dispo ?', importlib.util.find_spec("pandas") is not None)
+st.write('tqdm dispo ?', importlib.util.find_spec("tqdm") is not None)
+st.write('matplotlib_venn dispo ?', importlib.util.find_spec("matplotlib_venn") is not None)
+st.write('xml.etree.ElementTree dispo ?', importlib.util.find_spec("xml.etree.ElementTree") is not None)
+st.write('streamlit dispo ?', importlib.util.find_spec("streamlit") is not None)
+st.write('numpy dispo ?', importlib.util.find_spec("numpy") is not None)
+st.write('matplotlib dispo ?', importlib.util.find_spec("matplotlib") is not None)
 st.markdown("**Welcome on site!** here we can explore your data and compare two columns on a csv file")
 st.markdown("*How does it work?* - here your are on the main page, you can choose a button to go on another. All pages are in the menu at the left")
 st.write("Simply use : watch the example of a DataFrame")

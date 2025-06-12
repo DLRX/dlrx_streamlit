@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+import matplotlib
+matplotlib.use('Agg')  # Important pour les environnements sans interface graphique
+
 from matplotlib_venn import venn2
 import matplotlib.pyplot as plt
 
