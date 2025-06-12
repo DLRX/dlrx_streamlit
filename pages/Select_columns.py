@@ -64,15 +64,17 @@ if file:
                 unsafe_allow_html=True
             )
 
-        list_CK_Mc = []
-        list_CK_pfam = []
+        list_keys_test = []
+        list_keys_gt = [] #  ground_truth 
+
+
         for idx, row in df_filtered.iterrows():
             
             if pd.notna(row[options[-2]]) and row[options[-2]] != ' ':
-                list_CK_Mc.append(row['SeqCluster'])
+                list_keys_test.append(row[0])
             
             if pd.notna(row[options[-1]]) and row[options[-1]] != ' ':
-                list_CK_pfam.append(row['SeqCluster'])
+                list_keys_gt.append(row[0])
 
         
         if list_CK_Mc and list_CK_pfam:
@@ -81,7 +83,7 @@ if file:
             label1 = options[-2] if len(options) >= 2 else 'Set 1'
             label2 = options[-1] if len(options) >= 2 else 'Set 2'
             v = venn2(
-                [set(list_CK_Mc), set(list_CK_pfam)],
+                [set(list_keys_test), set(list_keys_gt)],
                 set_labels=(label1, label2),
                 set_colors=('#1f77b4', '#ff7f0e'),
                 ax=ax
