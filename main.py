@@ -12,7 +12,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.image("img/logo.svg", use_container_width=False, width=100)
+st.markdown(
+    """
+    <div style="display: flex; justify-content: center;">
+        <img src="img/logo.svg" width="100" style="filter: drop-shadow(0 0 0 blue);">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 import importlib.util
 st.write('pandas dispo ?', importlib.util.find_spec("pandas") is not None)
