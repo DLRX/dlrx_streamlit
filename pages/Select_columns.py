@@ -112,4 +112,4 @@ if file:
             st.markdown('<div class="full-width-button"></div>', unsafe_allow_html=True)
 
         if btn:
-            st.switch_page("./pages/Tool_Intersection.py")
+            st.switch_page("Tool_Intersection.py")

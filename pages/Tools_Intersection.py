@@ -127,18 +127,22 @@ if not done:
     )
 
 if done is True:
-    file = st.file_uploader("Pick a file")
+    file = df_filtered
+    st.write('Data visualisation', file)
+    fig, result = venn_analysis(file)
 
-    if file:
-        tab = pd.read_csv(file)
-        st.write('Data visualisation', tab)
+    for elm in result:
+        st.write(elm)
+    st.pyplot(fig)
 
-        fig, result = venn_analysis(tab)
+  
+        
 
-        for elm in result:
-            st.write(elm)
+        
 
-        st.pyplot(fig)
+        
+
+        
 
 col = st.container()
 with col:
