@@ -77,7 +77,7 @@ if file:
                 list_keys_gt.append(row[0])
 
         
-        if list_CK_Mc and list_CK_pfam:
+        if list_keys_test and list_keys_gt:
 
             fig, ax = plt.subplots()
             label1 = options[-2] if len(options) >= 2 else 'Set 1'
