@@ -1,17 +1,17 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(
-    page_title="CompTkit : Comparaison Tool Kit",
-    page_icon="🔍",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://github.com/dodol/dlrx_streamlit',
-        'Report a bug': 'https://github.com/dodol/dlrx_streamlit/issues',
-        'About': "CompTkit: A toolkit for comparing columns in your CSV files."
-    }
-)
+# st.set_page_config(
+#     page_title="CompTkit : Comparaison Tool Kit",
+#     page_icon="🔍",
+#     layout="wide",
+#     initial_sidebar_state="",
+#     menu_items={
+#         'Get Help': 'https://github.com/dodol/dlrx_streamlit',
+#         'Report a bug': 'https://github.com/dodol/dlrx_streamlit/issues',
+#         'About': "CompTkit: A toolkit for comparing columns in your CSV files."
+#     }
+# )
 
 with st.sidebar:
     st.title("Navigation")
