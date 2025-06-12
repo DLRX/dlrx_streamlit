@@ -15,7 +15,7 @@ st.markdown(
 st.markdown(
     """
     <div style="display: flex; justify-content: center;">
-        <img src="img/logo.svg" width="100" style="filter: drop-shadow(0 0 0 blue);">
+        <img src="./img/logo.svg" width="100" style="filter: drop-shadow(0 0 0 blue);">
     </div>
     """,
     unsafe_allow_html=True
