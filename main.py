@@ -13,7 +13,7 @@ st.markdown(
 )
 _, col_img, _ = st.columns(3)
 with col_img:
-    st.image("img/logo.svg", width=100)
+    st.image("img/logo.svg", width=1000)
 
 
 import importlib.util
