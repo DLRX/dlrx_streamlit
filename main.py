@@ -13,17 +13,20 @@ import pandas as pd
 #     }
 # )
 
-with st.sidebar:
-    st.title("Navigation")
-    st.markdown("## Pages")
-    st.page_link("main.py", label="🏠 Accueil", icon="🏠")
-    st.page_link("pages/Select_columns.py", label="Sélection des colonnes", icon="🗂️")
-    st.page_link("pages/Tools_Intersection.py", label="Analyse Intersection", icon="🔗")
-    st.page_link("pages/InterPro_parser.py", label="InterPro mapping", icon="🧬")
-    st.markdown("---")
-    st.markdown("**Aide & Ressources**")
-    st.markdown("[Documentation](https://github.com/dodol/dlrx_streamlit)")
-    st.markdown("[Signaler un bug](https://github.com/dodol/dlrx_streamlit/issues)")
+def show_sidebar():
+    with st.sidebar:
+        st.title("Navigation")
+        st.markdown("## Pages")
+        st.page_link("main.py", label="Accueil", icon="🏠")
+        st.page_link("pages/Select_columns.py", label="Sélection des colonnes", icon="🗂️")
+        st.page_link("pages/Tools_Intersection.py", label="Analyse Intersection", icon="🔗")
+        st.page_link("pages/InterPro_parser.py", label="InterPro mapping", icon="🧬")
+        st.markdown("---")
+        st.markdown("**Aide & Ressources**")
+        st.markdown("[Documentation](https://github.com/dodol/dlrx_streamlit)")
+        st.markdown("[Signaler un bug](https://github.com/dodol/dlrx_streamlit/issues)")
+
+show_sidebar()
 
 done = False
 st.session_state['done'] = done
