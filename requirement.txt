@@ -1,0 +1,6 @@
+streamlit
+matplotlib
+matplotlib-venn
+pandas
+tqdm
+xml.etree.ElementTree
