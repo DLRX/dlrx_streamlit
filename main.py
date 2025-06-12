@@ -1,17 +1,17 @@
 import streamlit as st
 import pandas as pd
 
-# st.set_page_config(
-#     page_title="CompTkit : Comparaison Tool Kit",
-#     page_icon="🔍",
-#     layout="wide",
-#     initial_sidebar_state="",
-#     menu_items={
-#         'Get Help': 'https://github.com/dodol/dlrx_streamlit',
-#         'Report a bug': 'https://github.com/dodol/dlrx_streamlit/issues',
-#         'About': "CompTkit: A toolkit for comparing columns in your CSV files."
-#     }
-# )
+st.set_page_config(
+    page_title="CompTkit : Comparaison Tool Kit",
+    page_icon="🔍",
+    layout="wide",
+    initial_sidebar_state="",
+    menu_items={
+        'Get Help': 'https://github.com/dodol/dlrx_streamlit',
+        'Report a bug': 'https://github.com/dodol/dlrx_streamlit/issues',
+        'About': "CompTkit: A toolkit for comparing columns in your CSV files."
+    }
+)
 
 def show_sidebar():
     with st.sidebar:
@@ -23,8 +23,8 @@ def show_sidebar():
         st.page_link("pages/InterPro_parser.py", label="InterPro mapping", icon="🧬")
         st.markdown("---")
         st.markdown("**Aide & Ressources**")
-        st.markdown("[Documentation](https://github.com/dodol/dlrx_streamlit)")
-        st.markdown("[Signaler un bug](https://github.com/dodol/dlrx_streamlit/issues)")
+        st.markdown("[Documentation](https://github.com/DLRX/dlrx_streamlit)")
+        st.markdown("[Signaler un bug](https://github.com/DLRX/dlrx_streamlit/issues)")
 
 show_sidebar()
 
