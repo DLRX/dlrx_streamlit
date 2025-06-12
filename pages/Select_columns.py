@@ -86,7 +86,7 @@ if file:
         
 
         if st.button("Save Venn Diagram as Image"):
-            image_path = "data/venn_diagram.png"
+            image_path = "./data/venn_diagram.png"
             fig.savefig(image_path)
             st.success(f"Venn diagram saved to {image_path}")
 
