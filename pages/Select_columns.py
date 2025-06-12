@@ -72,10 +72,10 @@ if file:
         for idx, row in df_filtered.iterrows():
             
             if pd.notna(row[options[-2]]) and row[options[-2]] != ' ':
-                list_keys_test.append(row[0])
+                list_keys_test.append(row.iloc[0])
             
             if pd.notna(row[options[-1]]) and row[options[-1]] != ' ':
-                list_keys_gt.append(row[0])
+                list_keys_gt.append(row.iloc[0])
 
         
         if list_keys_test and list_keys_gt:
