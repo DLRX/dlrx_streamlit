@@ -68,10 +68,10 @@ if file:
         list_CK_pfam = []
         for idx, row in df_filtered.iterrows():
             
-            if len(options) > 2 and pd.notna(row[options[-2]]) and row[options[-2]] != ' ':
+            if pd.notna(row[options[-2]]) and row[options[-2]] != ' ':
                 list_CK_Mc.append(row['SeqCluster'])
             
-            if len(options) > 3 and pd.notna(row[options[-1]]) and row[options[-1]] != ' ':
+            if pd.notna(row[options[-1]]) and row[options[-1]] != ' ':
                 list_CK_pfam.append(row['SeqCluster'])
 
         
