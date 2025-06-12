@@ -1,6 +1,29 @@
 import streamlit as st
 import pandas as pd
 
+st.set_page_config(
+    page_title="CompTkit : Comparaison Tool Kit",
+    page_icon="🔍",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://github.com/dodol/dlrx_streamlit',
+        'Report a bug': 'https://github.com/dodol/dlrx_streamlit/issues',
+        'About': "CompTkit: A toolkit for comparing columns in your CSV files."
+    }
+)
+
+with st.sidebar:
+    st.title("Navigation")
+    st.markdown("## Pages")
+    st.page_link("main.py", label="🏠 Accueil", icon="🏠")
+    st.page_link("pages/Select_columns.py", label="Sélection des colonnes", icon="🗂️")
+    st.page_link("pages/Tools_Intersection.py", label="Analyse Intersection", icon="🔗")
+    st.page_link("pages/InterPro_parser.py", label="InterPro mapping", icon="🧬")
+    st.markdown("---")
+    st.markdown("**Aide & Ressources**")
+    st.markdown("[Documentation](https://github.com/dodol/dlrx_streamlit)")
+    st.markdown("[Signaler un bug](https://github.com/dodol/dlrx_streamlit/issues)")
 
 done = False
 st.session_state['done'] = done
