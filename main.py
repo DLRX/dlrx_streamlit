@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 
+st.set_page_config(initial_sidebar_state="expanded", page_title="CompTkit", layout="centered")
+
 # Désactive la navigation automatique de Streamlit en ne mettant pas les pages dans le dossier 'pages'
 
 
