@@ -6,6 +6,11 @@ matplotlib.use('Agg')  # Important pour les environnements sans interface graphi
 from matplotlib_venn import venn2
 import matplotlib.pyplot as plt
 
+import os
+
+# Crée le dossier s’il n’existe pas
+os.makedirs('data', exist_ok=True)
+
 
 done = False
 st.session_state['done'] = done
