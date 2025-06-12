@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 
+# Désactive la navigation automatique de Streamlit en ne mettant pas les pages dans le dossier 'pages'
+# ou en utilisant une structure personnalisée de navigation via la sidebar
+
 st.set_page_config(
     page_title="CompTkit : Comparaison Tool Kit",
     page_icon="🔍",
@@ -17,10 +20,26 @@ def show_sidebar():
     with st.sidebar:
         st.title("Navigation")
         st.markdown("## Pages")
-        st.page_link("main.py", label="Accueil", icon="🏠")
-        st.page_link("pages/Select_columns.py", label="Sélection des colonnes", icon="🗂️")
-        st.page_link("pages/Tools_Intersection.py", label="Analyse Intersection", icon="🔗")
-        st.page_link("pages/InterPro_parser.py", label="InterPro mapping", icon="🧬")
+        # Utilise st.button ou st.radio pour la navigation personnalisée
+        page = st.radio(
+            "Aller à la page :",
+            [
+                "Accueil",
+                "Sélection des colonnes",
+                "Analyse Intersection",
+                "InterPro mapping"
+            ],
+            index=0,
+            key="nav_radio"
+        )
+        if page == "Accueil":
+            pass  # On reste sur la page principale
+        elif page == "Sélection des colonnes":
+            st.switch_page("pages/Select_columns.py")
+        elif page == "Analyse Intersection":
+            st.switch_page("pages/Tools_Intersection.py")
+        elif page == "InterPro mapping":
+            st.switch_page("pages/InterPro_parser.py")
         st.markdown("---")
         st.markdown("**Aide & Ressources**")
         st.markdown("[Documentation](https://github.com/DLRX/dlrx_streamlit)")
