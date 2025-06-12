@@ -5,10 +5,10 @@ st.set_page_config(
     page_title="CompTkit : Comparaison Tool Kit",
     page_icon="🔍",
     layout="wide",
-    initial_sidebar_state="",
+    initial_sidebar_state="collapsed",
     menu_items={
-        'Get Help': 'https://github.com/dodol/dlrx_streamlit',
-        'Report a bug': 'https://github.com/dodol/dlrx_streamlit/issues',
+        'Get Help': 'https://github.com/DLRX/dlrx_streamlit',
+        'Report a bug': 'https://github.com/DLRX/dlrx_streamlit/issues',
         'About': "CompTkit: A toolkit for comparing columns in your CSV files."
     }
 )
