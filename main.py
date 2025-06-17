@@ -7,7 +7,7 @@ st.session_state['done'] = done
 
 st.markdown(
     """
-    <h1 style='text-align: center;'> CompTkit : Comparaison Tool Kit</h1>
+    <h1 style='text-align: center;'> CompTkit : Comparison Tool Kit</h1>
     """,
     unsafe_allow_html=True
 )
