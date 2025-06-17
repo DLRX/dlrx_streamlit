@@ -56,12 +56,27 @@ def main(input_file, output_dir):
     
     context = ET.iterparse(xml, events=('start', 'end'))
 
-    for event, elem in tqdm(context, desc="Processing XML"):
-        
+    progress_bar = st.progress(0)
+    total = None
+    processed = 0
+
+    # Try to get the total number of events for progress estimation (optional)
+    # If you know the number of 'interpro' tags, you can set total = that number
+
+    for event, elem in context:
+        # Update progress bar every 1000 events (or as you wish)
+        processed += 1
+        if processed % 1000 == 0:
+            if total:
+                progress = processed / total
+            else:
+                progress = 0.0  # Indeterminate if total unknown
+            progress_bar.progress(min(progress, 1.0))
+
         if event == 'start' and elem.tag == 'interpro':
             interpro_id = elem.attrib.get('id')
             shortname = elem.attrib.get('short_name')
-        
+
             if elem.tag not in all_db:
                 all_db[elem.tag] = []
             all_db[elem.tag].append([interpro_id, shortname])
@@ -88,7 +103,7 @@ def main(input_file, output_dir):
 
             if db not in [entry[0] for entry in all_db.get('class_list', [])]:
                 map_interpro[interpro_id].append([db, dbkey, cat, name])
-            
+
         elif event == 'start' and elem.tag == 'db_xref' and bool_tag:
             if res_tag == 'member_list' or bool_tag:
                 db = elem.attrib.get('db')
@@ -116,7 +131,7 @@ def main(input_file, output_dir):
 
             if db not in [entry[0] for entry in all_db.get('external_doc_list', [])]:
                 map_interpro[interpro_id].append([db, dbkey])
-        
+
         elif event == 'start' and elem.tag == 'member_list':
             res_tag = 'member_list'
             bool_tag = True
@@ -124,6 +139,8 @@ def main(input_file, output_dir):
         elif event == 'end' and elem.tag == 'member_list':
             res_tag = None
             bool_tag = False
+
+    progress_bar.progress(1.0)
 
     writter_map_interpro(map_interpro, all_db, output_dir)
     return all_db
