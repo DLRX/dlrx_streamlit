@@ -55,9 +55,3 @@ col1, col2, col3 = st.columns(3)
 with col1:
     if st.button("Select columns"):
         st.switch_page("pages/venn_analysis.py")
-with col2:
-    if st.button("Analyse Intersection"):
-        st.switch_page("pages/GO_results.py")
-with col3:
-    if st.button("InterPro mapping"):
-        st.switch_page("pages/Supplementary.py")
