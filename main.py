@@ -34,15 +34,9 @@ df = pd.DataFrame({
     '1st_result': ['ID1 ID2', 'ID2', 'ID3', '', 'ID5'],
     '2nd_result' : ['ID2|ID3', 'ID1', 'ID3', 'ID2|ID4|ID5', 'ID5']
 })
-def highlight_cells(x):
-    df = x.copy()
-    styles = pd.DataFrame('', index=df.index, columns=df.columns)
-    # Highlight row index 2 (third row), columns '1st_result' and '2nd_result'
-    styles.loc[2, '1st_result'] = 'background-color: yellow'
-    styles.loc[2, '2nd_result'] = 'background-color: yellow'
-    return styles
 
-st.dataframe(df.style.apply(highlight_cells, axis=None))
+
+st.write(df)
 
 
 st.write("""
