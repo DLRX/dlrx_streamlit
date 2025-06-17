@@ -50,7 +50,8 @@ if file:
     st.write('You selected:', options)
 
 
-    if options:
+
+    if len(options) >= 2:
         df_filtered = df[options]
         st.session_state['df_filtered'] = df_filtered 
 
