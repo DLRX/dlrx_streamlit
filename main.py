@@ -46,11 +46,7 @@ You can input any csv file but it has to contain:
 - others are simply ignored
 """)
 
-st.markdown(
-    'Here the comparaison show that for result_1 & result_2 some IDs <span style="background-color: yellow; color: black">are common</span> and others are differents. Sometimes it is a subset sometimes it isn\'t, etc.',
-
-    unsafe_allow_html=True
-)
+st.write("Here the comparaison show that for result_1 & result_2 some IDs are common and others are differents. Sometimes it is a subset sometimes it isn\'t, etc.")
 st.write("gradually, the comparaison becomes more difficult, there are some pages dedicatited for that !")
 st.write("Now you can naviguate !")
 
