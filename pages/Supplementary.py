@@ -17,10 +17,6 @@ st.write("This page is currently currently being created... ")
 st.write("Before the page creation, we propose a pipeline to mapping severals IDs such as InterPro, Pfam, GO etc. in order to compare it easier")
 #if st.button("Mapping other to GO"):
 #    st.markdown('[Open InterPro to GO Mapping](https://current.geneontology.org/ontology/external2go)')
-
-
-
-
         
 
 def writter_map_interpro(map_dict, name_dict, output):
@@ -140,7 +136,10 @@ option = st.selectbox(
 if option == 'InterPro parser':
     file = st.text_input("Entrez le chemin d'accès du fichier (.xml & without "")")
     if file:
-        st.write(main(file, ".\data"))
+        op = st.text_input("Entrer le chemin ou sera sauvegardé le parsage du fichier xml")
+        if op:
+            st.write(main(file, op))
+
 if option == 'FDR':
     st.write('Fasle Discovery Rate')
     file = st.file_uploader("Pick a file")
