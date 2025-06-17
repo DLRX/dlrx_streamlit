@@ -131,7 +131,11 @@ def main(input_file, output_dir):
 
 option = st.selectbox(
      'Select your task',
-     ('InterPro parser', 'FDR'))
+     ('Browse','InterPro parser', 'FDR'))
+
+if option == 'Browse':
+    protein = st.text_input("Entrez l'AC UniProt d'une Protein :")
+    st.write(protein)
 
 if option == 'InterPro parser':
     file = st.text_input("Entrez le chemin d'accès du fichier (.xml & without "")")
