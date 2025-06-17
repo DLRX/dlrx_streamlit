@@ -136,7 +136,7 @@ option = st.selectbox(
 if option == 'InterPro parser':
     file = st.text_input("Entrez le chemin d'accès du fichier (.xml & without "")")
     if file:
-        output_dir = st.text_input("Entrez le chemin du dossier de sortie (ex: C:\\Users\\dodol\\Documents\\output)")
+        output_dir = st.text_input("Entrez le chemin du dossier de sortie")
         if output_dir:
             st.write(main(file, fr"{output_dir}"))
 
