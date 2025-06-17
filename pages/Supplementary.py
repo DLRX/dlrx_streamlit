@@ -136,9 +136,9 @@ option = st.selectbox(
 if option == 'InterPro parser':
     file = st.text_input("Entrez le chemin d'accès du fichier (.xml & without "")")
     if file:
-        op = st.text_input("Entrer le chemin ou sera sauvegardé le parsage du fichier xml")
-        if op:
-            st.write(main(file, op))
+        output_dir = st.text_input("Entrez le chemin du dossier de sortie (ex: C:\\Users\\dodol\\Documents\\output)")
+        if output_dir:
+            st.write(main(file, fr"{output_dir}"))
 
 if option == 'FDR':
     st.write('Fasle Discovery Rate')
