@@ -6,5 +6,6 @@ scipy
 matplotlib-venn
 numpy
 cafaeval
+cafaeval.evaluation
 
 
