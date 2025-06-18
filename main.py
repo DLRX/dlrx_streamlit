@@ -24,6 +24,9 @@ st.write('xml.etree.ElementTree dispo ?', importlib.util.find_spec("xml.etree.El
 st.write('streamlit dispo ?', importlib.util.find_spec("streamlit") is not None)
 st.write('numpy dispo ?', importlib.util.find_spec("numpy") is not None)
 st.write('matplotlib dispo ?', importlib.util.find_spec("matplotlib") is not None)
+st.write('cafaeval dispo ?', importlib.util.find_spec("cafaeval") is not None)
+
+
 st.markdown("**Welcome on site!** here we can explore your data and compare two columns on a csv file")
 st.markdown("*How does it work?* - here your are on the main page, you can choose a button to go on another. All pages are in the menu at the left")
 st.write("Simply use : watch the example of a DataFrame")
