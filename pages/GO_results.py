@@ -10,6 +10,7 @@ import os
 obo_file = st.text_input("Entrez le chemin d'accès du fichier (.obo & without \"\")")
 
 if obo_file:
+    st.write("path is : ", obo_file)
     pred_dir = st.text_input("Entrez le chemin d'accès du dossier de prédictions (without \"\")")
     if pred_dir:
         gt_file = st.text_input("Entrez le chemin d'accès du fichier ground_truth (without \"\")")
