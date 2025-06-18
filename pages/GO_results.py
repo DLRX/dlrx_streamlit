@@ -20,5 +20,10 @@ if obo_file and pred_dir and gt_file:
     pred_dir = os.path.abspath(pred_dir)
     gt_file = os.path.abspath(gt_file)
 
+
+    obo_file = r"C:\Users\dodol\Documents\LBM\Stage\data\NetGO_results\cafa_evaluation_data\test\abre.obo"
+    pred_dir = r"C:\Users\dodol\Documents\LBM\Stage\data\NetGO_results\cafa_evaluation_data\test\predictions"
+    gt_file = r"C:\Users\dodol\Documents\LBM\Stage\data\NetGO_results\cafa_evaluation_data\test\g_t.tsv"
+    
     df, df_b = cafa_eval(obo_file, pred_dir, gt_file)
     st.write(df_b['f'])
